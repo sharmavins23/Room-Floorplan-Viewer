@@ -1,0 +1,70 @@
+:root {
+    --bg-color: rgb(100, 100, 100);
+
+    /* Coloration */
+    --color-kitchen: rgba(254, 164, 127, 1);
+    --color-living-room: rgba(179, 55, 113, 1);
+    --color-balcony: rgba(59, 59, 152, 1);
+    --color-bathroom: rgba(85, 230, 193, 1);
+    --color-bedroom-1: rgba(154, 236, 219, 1);
+    --color-bedroom-2: rgba(214, 162, 232, 1);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+
+    background-color: var(--bg-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 1500px;
+    z-index: -1000;
+}
+
+.balcony {
+    position: absolute;
+    top: 204px;
+    left: 99px;
+
+    width: 282px;
+    height: 174px;
+
+    background-color: var(--color-balcony);
+    opacity: 0.5;
+    transition: opacity 1s ease;
+}
+
+.balcony > h1 {
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
+.balcony:hover {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.balcony:hover > h1 {
+    opacity: 1;
+    transition: opacity 500ms ease;
+}
