@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Room Occupancy Visualizer</title>
+    <title>Room Layout Visualizer</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="main.js"></script>
@@ -16,19 +17,49 @@
     <div class="container">
         <img src="img/floorplan.png" />
 
-        <div class="kitchen"></div>
+        <div class="kitchen">
+            <svg width="542" height="522">
+                <polygon points="0 0, 407 0, 407 226, 542 226, 542 368, 415 368, 415 522, 0 522"></polygon>
+            </svg>
+            <h1>Kitchen</h1>
+        </div>
 
-        <div class="living-room"></div>
+        <div class="living-room">
+            <svg width="482" height="929">
+                <polygon
+                    points="135 929, 135 633, 0 633, 0 173, 110 60, 110 0, 362 0, 362 60, 478 174, 478 229, 482 229, 482 837, 280 837, 280 929">
+                </polygon>
+            </svg>
+            <h1>Living Room</h1>
+        </div>
 
         <div class="balcony">
+            <svg width="339" height="208">
+                <polygon points="0 0, 339 0, 339 208, 0 208"></polygon>
+            </svg>
             <h1>Balcony</h1>
         </div>
 
-        <div class="bathroom"></div>
+        <div class="bathroom">
+            <svg width="483" height="359">
+                <polygon points="0 359, 483 359, 483 2, 426 2, 336 0, 201 0, 201 22, 199 112, 199 148, 0 148"></polygon>
+            </svg>
+            <h1>Bathroom</h1>
+        </div>
 
-        <div class="bedroom-1"></div>
+        <div class="bedroom-1">
+            <svg width="573" height="462">
+                <polygon points="0 460, 135 460, 225 462, 242 462, 242 366, 573 366, 573 0, 0 0"></polygon>
+            </svg>
+            <h1>Bedroom 1</h1>
+        </div>
 
-        <div class="bedroom-2"></div>
+        <div class="bedroom-2">
+            <svg width="527" height="461">
+                <polygon points="41 461, 527 461, 527 0, 330 0, 330 7, 0 7, 0 90, 41 90, 41 123"></polygon>
+            </svg>
+            <h1>Bedroom 2</h1>
+        </div>
 
     </div>
 

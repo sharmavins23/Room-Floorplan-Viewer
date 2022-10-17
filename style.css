@@ -1,13 +1,15 @@
 :root {
-    --bg-color: rgb(100, 100, 100);
+    --bg-color: rgb(23, 23, 23);
 
     /* Coloration */
     --color-kitchen: rgba(254, 164, 127, 1);
     --color-living-room: rgba(179, 55, 113, 1);
     --color-balcony: rgba(59, 59, 152, 1);
-    --color-bathroom: rgba(85, 230, 193, 1);
-    --color-bedroom-1: rgba(154, 236, 219, 1);
+    --color-bathroom: rgb(179, 57, 57);
+    --color-bedroom-1: rgb(33, 140, 116);
     --color-bedroom-2: rgba(214, 162, 232, 1);
+
+    --scale-factor: 1;
 }
 
 body {
@@ -31,40 +33,94 @@ body {
 }
 
 .container > div {
+    position: absolute;
+
+    opacity: 0.5;
+    transition: opacity 1s ease;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-family: "Roboto Mono", sans-serif;
+    color: rgb(255, 255, 255, 0.8);
+}
+
+.container > div > svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform-origin: top left;
+    transform: scale(var(--scale-factor));
+}
+
+.container > div > h1 {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.container > div:hover,
+.container > div:hover > h1 {
+    opacity: 0.9;
+    transition: opacity 1s ease;
 }
 
 img {
-    width: 1500px;
+    width: calc(1808px * var(--scale-factor));
     z-index: -1000;
 }
 
 .balcony {
-    position: absolute;
-    top: 204px;
-    left: 99px;
+    top: calc(247px * var(--scale-factor));
+    left: calc(120px * var(--scale-factor));
+    width: calc(339px * var(--scale-factor));
+    height: calc(208px * var(--scale-factor));
 
-    width: 282px;
-    height: 174px;
-
-    background-color: var(--color-balcony);
-    opacity: 0.5;
-    transition: opacity 1s ease;
+    fill: var(--color-balcony);
 }
 
-.balcony > h1 {
-    opacity: 0;
-    transition: opacity 500ms ease;
+.kitchen {
+    top: calc(468px * var(--scale-factor));
+    left: calc(65px * var(--scale-factor));
+    width: calc(542px * var(--scale-factor));
+    height: calc(522px * var(--scale-factor));
+
+    fill: var(--color-kitchen);
 }
 
-.balcony:hover {
-    opacity: 1;
-    transition: opacity 1s ease;
+.living-room {
+    top: calc(61px * var(--scale-factor));
+    left: calc(472px * var(--scale-factor));
+    width: calc(482px * var(--scale-factor));
+    height: calc(929px * var(--scale-factor));
+
+    fill: var(--color-living-room);
 }
 
-.balcony:hover > h1 {
-    opacity: 1;
-    transition: opacity 500ms ease;
+.bathroom {
+    top: calc(764px * var(--scale-factor));
+    left: calc(766px * var(--scale-factor));
+    width: calc(483px * var(--scale-factor));
+    height: calc(359px * var(--scale-factor));
+
+    fill: var(--color-bathroom);
+}
+
+.bedroom-1 {
+    top: calc(290px * var(--scale-factor));
+    left: calc(967px * var(--scale-factor));
+    width: calc(573px * var(--scale-factor));
+    height: calc(462px * var(--scale-factor));
+
+    fill: var(--color-bedroom-1);
+}
+
+.bedroom-2 {
+    top: calc(662px * var(--scale-factor));
+    left: calc(1222px * var(--scale-factor));
+    width: calc(527px * var(--scale-factor));
+    height: calc(461px * var(--scale-factor));
+
+    fill: var(--color-bedroom-2);
 }
